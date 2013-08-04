@@ -58,6 +58,8 @@ class block_massaction extends block_base {
             return $this->content;
         }
 
+        $this->content = new stdClass();
+
         if ($PAGE->user_is_editing()) {
             $jsmodule = array(
                 'name'         => 'block_massaction',
