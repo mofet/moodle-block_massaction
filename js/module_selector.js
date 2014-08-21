@@ -86,7 +86,12 @@ module_selector.prototype.add_module_checkbox = function(section_number, module_
         var box = Y.Node.create('<input type="checkbox" id="' + box_id + '" class="module_sector_checkbox" />');
 
         // attach it to the command box
-        module_el.one('span.commands').appendChild(box);
+        try {
+            module_el.one('span.commands').appendChild(box);
+        } catch (err) {
+            console.log(err.message);
+        }
+
     }
 
     // keep track in registry
