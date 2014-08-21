@@ -143,7 +143,7 @@ EOB;
             $this->content = '';
         }
 
-        $this->content->footer = '';
+        //$this->content->footer = '';
         return $this->content;
     }
 }
